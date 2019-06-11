@@ -1,0 +1,8 @@
+--- a/drivers/usb/gadget/function/u_serial.c	2018-04-09 13:33:01.858502000 +0800
++++ b/drivers/usb/gadget/function/u_serial.c	2018-03-07 23:52:17.000000000 +0800
+@@ -125,7 +125,7 @@
+ 	struct gs_port	*port;
+ } ports[MAX_U_SERIAL_PORTS];
+
+-#define GS_CLOSE_TIMEOUT		15		/* seconds */
++#define GS_CLOSE_TIMEOUT		0		/* seconds */
