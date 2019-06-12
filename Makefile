@@ -14,6 +14,9 @@ $(info TARGET: $(TARGET))
 SUPPORTED_TARGETS := $(notdir $(wildcard targets/*))
 $(if $(filter $(TARGET),$(SUPPORTED_TARGETS)),,$(error Invalid TARGET variable; valid values are: $(SUPPORTED_TARGETS)))
 
+# Include target specific settings
+include targets/$(TARGET)/$(TARGET).mk
+
 .PHONY: default
 default: all
 
